@@ -4,6 +4,25 @@ def fibo_rec(n):
     else:
         return fibo_rec(n - 1) + fibo_rec(n - 2)
     
+#Testes para o primeiro fibonacci
+print(fibo_rec(4))
+print(fibo_rec(8))
+print(fibo_rec(16))
+print(fibo_rec(32))
+
+def fibo(n):
+    f = [0, 1]
+
+    for i in range(2, n + 1):
+        f.append(f[i - 1] + f[i - 2])
+
+    return f[n]
+
+#Testes para o segundo fibonacci
+print(fibo(4))
+print(fibo(8))
+print(fibo(16))
+print(fibo(32))
 
 def MEMORIZA_FIBO(f,n):
     for i in range(0,n+1):
@@ -19,12 +38,6 @@ def LOOK_UP(f,n):
         f[n] = LOOK_UP(f,n-1) + LOOK_UP(f,n-2)
     return f[n]
 
-print(fibo_rec(4))
-print(fibo_rec(8))
-print(fibo_rec(16))
-print(fibo_rec(32))
-
-
 #Testes para o terceiro fibonacci
 print(MEMORIZA_FIBO([],4))
 print(MEMORIZA_FIBO([],8))
@@ -35,15 +48,3 @@ print(MEMORIZA_FIBO([],1000))
 print(MEMORIZA_FIBO([],10000))
 
 
-def fibo(n):
-    f = [0, 1]
-
-    for i in range(2, n + 1):
-        f.append(f[i - 1] + f[i - 2])
-
-    return f[n]
-
-print(fibo(4))
-print(fibo(8))
-print(fibo(16))
-print(fibo(32))
