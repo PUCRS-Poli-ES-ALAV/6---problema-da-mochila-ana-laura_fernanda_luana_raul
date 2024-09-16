@@ -24,9 +24,12 @@ print(fibo(8))
 print(fibo(16))
 print(fibo(32))
 
-def MEMORIZA_FIBO(f,n):
-    for i in range(0,n+1):
+def MEMORIZA_FIBO(n):
+    f = []
+    i = 0
+    while i <= n:
         f.append(-1)
+        i += 1
     return LOOK_UP(f,n)
 
 def LOOK_UP(f,n):
@@ -39,12 +42,13 @@ def LOOK_UP(f,n):
     return f[n]
 
 #Testes para o terceiro fibonacci
-print(MEMORIZA_FIBO([],4))
-print(MEMORIZA_FIBO([],8))
-print(MEMORIZA_FIBO([],16))
-print(MEMORIZA_FIBO([],32))
-print(MEMORIZA_FIBO([],128))
-print(MEMORIZA_FIBO([],1000))
-print(MEMORIZA_FIBO([],10000))
+lista = []
+print(MEMORIZA_FIBO(4))
+print(MEMORIZA_FIBO(8))
+print(MEMORIZA_FIBO(16))
+print(MEMORIZA_FIBO(32))
+print(MEMORIZA_FIBO(128))
+print(MEMORIZA_FIBO(1000))
+print(MEMORIZA_FIBO(10000))
 
 
